@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4 50%);
+        }
+
+        form {
+            max-width: 400px;
+            width: 90%;
+            padding: 20px;
+            border-radius: 16px;
+            background: radial-gradient(circle, #ffffff, #f7f7f7);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f9f8ff;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            background-color: #ffffff;
+            border-color: #a29bfe;
+            outline: none;
+            box-shadow: 0 0 8px rgba(162, 155, 254, 0.5);
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h2>Hotel Reservation</h2>
+        <label for="first-name">First name *</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last name *</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="arrival-date">Arrival date *</label>
+        <input type="date" id="arrival-date" name="arrival-date" required>
+
+        <label for="departure-date">Departure date *</label>
+        <input type="date" id="departure-date" name="departure-date" required>
+
+        <label for="adults">Number of adults *</label>
+        <select id="adults" name="adults" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="children">Number of children *</label>
+        <select id="children" name="children" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="comments">Questions/Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <div class="buttons">
+            <button type="button" class="back-btn" onclick="history.back()">Back</button>
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
